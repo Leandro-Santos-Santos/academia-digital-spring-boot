@@ -3,8 +3,11 @@ package me.dio.academia.digital.service.impl;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import me.dio.academia.digital.entity.Aluno;
+import me.dio.academia.digital.entity.AvaliacaoFisica;
 import me.dio.academia.digital.entity.form.AlunoForm;
 import me.dio.academia.digital.entity.form.AlunoUpdateForm;
 import me.dio.academia.digital.service.IAlunoService;
@@ -43,6 +46,16 @@ public class AlunoServiceImpl implements IAlunoService{
     public void delete(Long id) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'delete'");
+    }
+
+    @Override()
+    public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
+        
+        Aluno aluno = repository.findById(id).get();
+
+        return service.getAllAvaliacaoFisicaId(id);
+        
+        
     }
 
 }
