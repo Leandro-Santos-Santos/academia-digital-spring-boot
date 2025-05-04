@@ -6,8 +6,15 @@ spring:
 jpa:
   show-sql: true
   hibernate:
-    ddl-auto: update
+    ddl-auto: drop
   properties:
     hibernate.format_sql: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
+      
   
       
